@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookShare</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='top.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">BookShare</h1>
+            <nav class="nav">
+                <a href="#features">機能</a>
+                <a href="#popular-books">人気の本</a>
+                <a href="/login" class="login-btn">ログイン</a>
+            </nav>
+        </div>
+    </header>    
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>本を投稿して共有しよう！</h2>
+                <p>読んだ本の感想をシェアしたり、新しい本を発見しましょう。</p>
+                <a href="/registration" class="cta-btn">今すぐ始める</a>
+            </div>
+        </section>
+        <section id="features" class="features">
+            <h3>BookShareの特徴</h3>
+            <div class="feature-item">📚 投稿された本の感想を閲覧</div>
+            <div class="feature-item">✍️ 簡単に投稿可能</div>
+            <div class="feature-item">🌟 お気に入り機能で本を保存</div>
+        </section>
+        <section id="popular-books" class="popular-books">
+            <h3>人気の本</h3>
+            <div class="book-grid">
+                <div class="book-item">本1</div>
+                <div class="book-item">本2</div>
+                <div class="book-item">本3</div>
+                <div class="book-item">本4</div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>© 2024 BookShare. All rights reserved.</p>
+    </footer>
+</body>
+</html>

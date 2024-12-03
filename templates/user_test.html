@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookShare</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='user.css') }}">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">📚 BookShare</div>
+    <div class="user-info">ようこそ、<span id="username">{{ name }}</span> さん</div>
+  </header>
+  <main class="main-content">
+    <h1>BookShareへようこそ</h1>
+    <div class="actions">
+      <a href="/post" class="btn post-btn">投稿する</a>
+      <a href="/view" class="btn view-btn">閲覧する</a>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2024 BookShare. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

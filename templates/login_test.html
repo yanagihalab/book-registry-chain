@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+        <title>ログイン</title>
+        <link rel="stylesheet">
+    </head>
+    <body>
+        <form action="/login2" method="POST">
+            <h2>ログイン</h2>
+            <div>
+                <label for="id">ログインID</label><br>
+                <input type="text" id="id" name="id" placeholder="ログインIDを入力" required><br>
+            </div>
+            <div>
+                <label for="password">パスワード</label><br>
+                <input type="password" id="password" name="password" placeholder="パスワードを入力" required><br>
+            </div>
+            <input type="submit" value="ログイン">
+        </form>
+    </body>
+</html>

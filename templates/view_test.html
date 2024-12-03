@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>書籍閲覧</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='view.css') }}">
+</head>
+<body>
+    <header>
+        <h1>書籍閲覧</h1>
+    </header>
+    <main>
+        <section class="book-details">
+            <h2>書籍タイトル: 星を追う旅人</h2>
+            <p class="book-content">
+                あなたが星を追い求めるたび、心の中の輝きが増していく。広大な空と無限の可能性を見つめながら、
+                小さな一歩を踏み出す物語がここにあります。
+            </p>
+        </section>
+
+        <section class="gift-section">
+            <h3>ギフトを送る</h3>
+            <button type="button" onclick="sendTransaction(1000)">🌟 お気に入り (1000)</button>
+            <button type="button" onclick="sendTransaction(100)">👍 いいね (100)</button>
+            <button type="button" onclick="sendTransaction(5000)">🌸 花束 (5000)</button>
+        </section>
+    </main>
+
+    <script>
+        async function sendTransaction(amount) {
+            const sender = "cosmosjapan";
+            const recipient = "juno1luesv8s490kcmatae2smccnwnscr93yllydkhf";
+            const passphrase = "shu270423";
+
+            try {
+                const response = await fetch('/view2', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ sender, recipient, amount, passphrase })
+                });
+                const result = await response.json();
+                alert(result.message);
+            } catch (error) {
+                alert('送金に失敗しました: ' + error.message);
+            }
+        }
+    </script>
+</body>
+</html>
