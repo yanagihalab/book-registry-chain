@@ -46,6 +46,13 @@
 - **ブロックチェーン**: Cosmos SDK 互換のネットワークで原稿データを記録  
 ---
 
+## **Deploy ネットワーク**  
+| Deploy ネットワーク | コントラクトアドレス | Blockchain Explorer |
+|----------------|--------------------------------|--------------------------------|
+| **テストネット** | neutron14zpjn72zg7535nqgtv78l7uhl08qp664h0mlu5x422vqxxtrhgsqudtcz8 | [リンク](https://www.mintscan.io/neutron-testnet/wasm/contract/neutron14zpjn72zg7535nqgtv78l7uhl08qp664h0mlu5x422vqxxtrhgsqudtcz8/) |
+| **メインネット** | neutron1fndrppflxqwsgnwrr3299n369t3d49fgwznq9cdvt6hk62nc2jgsh6sdhz | [リンク](https://www.mintscan.io/neutron/wasm/contract/neutron1fndrppflxqwsgnwrr3299n369t3d49fgwznq9cdvt6hk62nc2jgsh6sdhz/) |
+
+
 ## システム構成図
 
 
@@ -62,10 +69,8 @@
 また、操作するブロックチェーンを選定し、適切に `ABCI-CLI` を準備する必要があります。  
 本ソースコードでは、neutronの`neutrond`（ABCI-CLI） を利用しています。  
 - [neutron](https://www.neutron.org/)  
-- [neutrond のインストールとチュートリアル](https://lab.stir.network/neutron-token-mint/)  
 - [neutrond リポジトリ](https://github.com/neutron-org/neutron)  
 - [neutrond のインストールとチュートリアル](https://lab.stir.network/neutron-token-mint/)  
-
 ---
 
 ## **免責事項**  
