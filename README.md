@@ -6,7 +6,7 @@
 記録し、透明性と永続性を確保するための分散型アプリケーション（DApp）です。
 本プロジェクトでは、**書籍の著作権や出版情報の管理、所有権の証明** などを
 スマートコントラクトを活用して実現します。  
-さらに、原稿の履歴（手形）をブロックチェーンに記録することで、盗用や盗作を
+さらに、原稿の履歴やテキスト情報（手形）をブロックチェーンに記録することで、盗用や盗作を
 防ぎ、著作者の権利を主張可能性を提供します。 
 
 ### **主な目的**  
@@ -23,9 +23,47 @@
 - 著作権管理  
 
 ### 今後追加予定機能
+- XXXXXXXXX
+- XXXXXXX 
+- XXXXXXXX
+- XXXXXXXX
+- XXXXXX 
 
+### リポジトリのファイル構造
 
-
+```
+📦 book-registry-dapp
+├── 📂 frontend           # フロントエンド関連 (React, JavaScript)
+├── 📂 templates
+│     ├── login_test.html
+│     ├── msg_test.html
+│     ├── registration_test.html
+│     ├── send.html
+│     ├── send_test.html
+│     ├── top_test.html
+│     ├── user_test.html
+│     └── view_test.html
+│
+│────── 📂 src
+│       ├── 📂 components  # UI コンポーネント
+│       ├── 📂 pages       # 各ページ
+│       └── index.js       # エントリーポイント
+│
+├── 📂 backend            # バックエンド関連 (Flask)
+│   ├── 📂 api            # API エンドポイント
+│   ├── app.py           # メインアプリケーション
+│   ├── requirements.txt  # Python 依存関係
+│   └── README.md
+│
+├── 📂 contracts         # スマートコントラクト (CosmWasm)
+│   ├── 📂 src           # スマートコントラクトのソースコード
+│   ├── Cargo.toml       # Rust パッケージ設定
+│   ├── schema.rs        # スマートコントラクトのスキーマ
+│   └── README.md
+├── .gitignore
+├── README.md
+└── LICENSE
+```
 
 ### **技術スタック**  
 | コンポーネント | 技術 |
@@ -46,7 +84,7 @@
 - **ブロックチェーン**: Cosmos SDK 互換のネットワークで原稿データを記録  
 ---
 
-## **Deploy ネットワーク**  
+## **コントラクトアドレス**  
 | Deploy ネットワーク | コントラクトアドレス | Blockchain Explorer |
 |----------------|--------------------------------|--------------------------------|
 | **テストネット** | neutron14zpjn72zg7535nqgtv78l7uhl08qp664h0mlu5x422vqxxtrhgsqudtcz8 | [リンク](https://www.mintscan.io/neutron-testnet/wasm/contract/neutron14zpjn72zg7535nqgtv78l7uhl08qp664h0mlu5x422vqxxtrhgsqudtcz8/) |
@@ -54,7 +92,6 @@
 
 
 ## システム構成図
-
 
 
 ## **貢献**  
